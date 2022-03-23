@@ -2,42 +2,36 @@
 # Note that this configuration is not an exact match to UI settings. Review and adjust as necessary.
 
 workflows:
-  default-workflow:
-    name: Default Workflow
-    max_build_duration: 60
-    environment:
-      flutter: stable
-      xcode: latest
-      cocoapods: default
+  my-workflow:
     scripts:
-      - |
-        # set up debug keystore
-        rm -f ~/.android/debug.keystore
-        keytool -genkeypair \
-          -alias androiddebugkey \
-          -keypass android \
-          -keystore ~/.android/debug.keystore \
-          -storepass android \
-          -dname 'CN=Android Debug,O=Android,C=US' \
-          -keyalg 'RSA' \
-          -keysize 2048 \
-          -validity 10000
-      - |
-        # set up local properties
-        echo "flutter.sdk=$HOME/programs/flutter" > "$FCI_BUILD_DIR/android/local.properties"
-      - flutter packages pub get
-      - flutter build appbundle --debug
-      - find . -name "Podfile" -execdir pod install \;
-      - flutter build ios --debug --no-codesign
+      - name: Add provisioning profiles
+        script: |
+          set -e # exit on first failed command
+
+          PROFILES_HOME="$HOME/Library/MobileDevice/Provisioning Profiles"
+          mkdir -p "$PROFILES_HOME"
+          echo ${PROVISIONING_PROFILE?} | base64 --decode > "$PROFILES_HOME/$(uuidgen).mobileprovision"
+      - name: Add signing certificate
+        script: |
+          set -e # exit on first failed command
+
+          echo ${CERTIFICATE?} | base64 --decode > /tmp/certificate.p12
+          keychain initialize
+          keychain add-certificates \
+              --certificate /tmp/certificate.p12 \
+              --certificate-password ${CERTIFICATE_PASSWORD?}
+      - name: Increment build number
+        script: agvtool new-version -all $BUILD_NUMBER
+      - name: Set up code signing settings on Xcode project
+        script: xcode-project use-profiles
+      - name: Build ipa for distribution
+        script: xcode-project build-ipa \
+                    --workspace "${XCODE_WORKSPACE?}" \
+                    --scheme "${XCODE_SCHEME?}"
     artifacts:
-      - build/**/outputs/apk/**/*.apk
-      - build/**/outputs/bundle/**/*.aab
-      - build/**/outputs/**/mapping.txt
       - build/ios/ipa/*.ipa
-      - /tmp/xcodebuild_logs/*.log
-      - build/windows/**/*.msix
-      - flutter_drive.log
     publishing:
       email:
         recipients:
           - subash.nair@outlook.com
+          
