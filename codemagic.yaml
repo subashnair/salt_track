@@ -1,37 +1,61 @@
-# Automatically generated on 2022-03-23 UTC from https://codemagic.io/app/623b7555971f580a5e852e7d/settings
+# Automatically generated on 2022-03-24 UTC from https://codemagic.io/app/623cae43971f5829383f5036/settings
 # Note that this configuration is not an exact match to UI settings. Review and adjust as necessary.
 
 workflows:
-  my-workflow:
+  default-workflow:
+    name: Default Workflow
+    max_build_duration: 60
+    environment:
+      vars:
+        APP_STORE_CONNECT_ISSUER_ID: 69a6de97-d145-47e3-e053-5b8c7c11a4d1
+        APP_STORE_CONNECT_KEY_IDENTIFIER: NTANGZ52UQ
+        APP_STORE_CONNECT_PRIVATE_KEY: Encrypted(Z0FBQUFBQmlQTE5kWVR2Y0JQRmdDWC16YVFqZWFZVWJnMU9Cb2FzS0JZWG9VZ3ZKbWMxQkk3ck1iOHlzWjNVU1NldmhCR0dvNEd4SUxBcGp5N0xlSXl5Y0laMzlsMEprQkVhVEE4UGJ4YzBGalFjOUIyNllBRFFycnJYVExJTkE5cWZGMGNMMFJURlFTNGIwem40VDA3REhoRlVaRXZjU3hsc1hSTDFlby1HeEpoZ1VPQ0RDMUg2UGc2aVdOellROUFVR19jRU5kdlZoSHJnMEpvUndwaXBsWGZxYmZDRUdXZFJFQk9KWW16emh2SlozTWp3elRTYXp1MUZBZGVJbnZYOGQ1bW9lS25GWVQ4UzBXb2tPejNqaUJ0LWowejctQTdBQmpESFkzRFdYSy0tZVllQy1JdVREVm05VnV3ZDQtZEVvTEdBOGpOOXEtRVhJdkVxalptWkYtSDVvdGRJdDJmRXRheUtaZkxoYTllQjJSRHFTdWxFcThDZ2JFUFhqYzRzczlNQjhrTFR3QlFHQXR2THo5Wmk5REpfbGM5dW5NTEhicVFOa1VhWEkwVVlNNGxFMmNJbz0=)
+        CERTIFICATE_PRIVATE_KEY: Encrypted(Z0FBQUFBQmlQTE5kbVBFRjNDLVVjRkF6T3F5RktqZXozTnV1QVhPanRfRmhvWDZRZnBuVFZodWNNYk5oRkFJajl1UmxsTExLLUd2aDY4dG5KdUI3eEFfcEVVOWRLd0pVNTVJYzBab2JGelFNdnl4bGtvOVo1eDBMSjVuUEh5eGJYNFhyU09Jc0NpTnVMTGU2MV9ReGRWSnNRd1Rra0RWcjl2QkE5dHktdGw2eHRISFFJaFBXNzdaZE9vdjdtekZHSFB3YllOLUpteVlTdHJMVDlaWHZQS1Q5Wkw4UjJERElKQV9jN2FUaERtZGFFZE9HTkRwOE03RFlkbmw5LUVpVHNGc2pEZ3piUWhIYXJHNGsxbkphSWc0a28wVlRPd1BiWjVqRE1EeW1vMlg1WlBNLXVYYXN0UTZvczVVVDBqTS1NVlEwX1JpSmxuZ0otd2dvZWhLWjU1dnFtNWRBd3dZc3pxS3k5VmdGeTlDYzVTVGhQXy1ZemdUMGRlSkV0RE84QkZSMUJWSHVKcUIzRENSbkQ1MjlTZTdrbXNJdm9mcy1WS05tVlZnRFc4Q1Y5eUZDRWVOZF9rTER6cm1VTkhBU2lHcWFYYWxta053Rjl1ZHdJNlBHNUdCX2tBUTRHOHAxbEMycDQ5VV9vLVMybkw2WU9MRl9lQ0QyelczWE15RWJtN0ROYnlTNnF6bU4tU2hOWnZPX1l4MExienFUVkhVemhWWUdOdmw0Ni1tSHJURWR6a2J2clhqUXZleFBwVnRwdHMzY19XanV2YXNWR2NOYUcxNlQ2QmhPV0QwYzY2ckE2WkxKdjhFcnVIUWZYc2JmdUVpZ3hJeUx3S1VpVFVpS0pxTUNBeUQ3RndYcDBJY1Y1WUF5WWlCa0paZ0FQQnZNZ1RtSTFSY1dnWm9EV0VOUEFiUFdqMEVqZUVsbWM1SEhyUEZQbExIX2RxanlVOWhOWXZOc0xrVGY4NHZJVGx3RTNJM19TNGlVTnpOYVFpd0dVbHUyT2tGVEx1bk5PWVRyZzhHMHdUM1pBclhoWEFGcVVFYTNwTDl6WmRRd1VOYUtuWGVPM1NjZF9TZnhiUUE4RERMOWdFeDdMbnpUa05HSWJtMkJfck1BRWNxMzVjeWxRNXU5cTMyTDg1WVJyb1ZIV2pEbktZQl9BY0d6eTVvbDlIUFVQeW9QeURKOFlVeXRuY0p0QWRmSE5xUFJJbDFjbTJGQ0ZjSVppQ0txOTgzb1YtdUx2SXdFTjJXb2djSDh5WkpuaEJURVBfWEpCTWJoOUR1d1pubW5DbDgxdm9VSkRpMzZsZk9xQmlFNmNrc0FUUHpBdXoxTjF2em95anJfbzM3OUo4Z0dnQWlIMnB2WVV0ODF5NURXaEhxVjVuWmVQeGwtaUNHQ2tGVzZtLW5Ga2sxMFhZV2gtZE1rR3Q2dWZMemkwWnM0aFl5QlZUbXVzaGh4WU1PWENnTkVEVGtfaENvcjl3VHo3UVRKV1Y3S2dzM3hVXzVMbDZnamFlWmpyU0tFSE92UW5MUU9ZMUZhejI3V2FRc1ZqaDk4RWFQcV9ZTzdqakRZcXBMa19sY2czWWZoWHJySVpBajVfY0VNN2EyTWVHNGtJVVQyLTF6OG9oOW1ramRJeTZ5T3hHWllfTmRubFdOd1dkR0xHcEdCaURXRGE0NHJoN2JKTWVORWYyRzllaTNMWGxsV3pYRFEyQTZQMHZxLU9BRjA3OWhObU85bW9iN2JYWS1oUlRIbEJBNnYtTl92d1NJVExIUUxQWXhKS0M0ZzhWNVAtc3cxME5OLXlLRy1GMTJxa0gxWEg2U3l4N0Z1dGZEajhRYTJEazV1eXhvYlJwRS03T1lHNHdfTUo5U0dPQm94WjluQk1tV05jejBlU3FYYkM2TFFKNmozTExRNXFaWTdKU3dNenNPbGZHRVk5eGVudFBVX0s5S21CX3VWWU42T3NFTlNoTEJtUE1XWXJDckpVd1o2RTQzVHRSVEx3a2FGNHFDblk1T3pCaHJNYWhCTEJoMmp3MW9aYkpHTXFHUl9WQ292eU04Zk1BWVNabTVVZ0Vmb2pVSXBKM0hMZldkYTgzXzRLRUplbjJ3UFpSTnhkWFY0aXJFYWF6LS1iZElvZFhRLTZMYV9pUHdvVG1RaG0tSmRpMWN2WmVPM0FkM1pQZTh3TVRIaWIyWVdGTVlIQVhUUGV0SnN2aTVpaWZvMWZ1X2lKd202TDBUd1FqUDVDa1lZTUl2WlAtdERYSFBORks2a21vcEl5NmluemFqTWhDbldac2NzeW5KbEUtellKU1N1NHVaSDUwQ1d2MVhKaUVDRDI1bThHVU1hd2dYNmdXUHZ1UFU4bkM0c0tpdC1uNUpncmJraFpGWjhWZkw1Q2xOVFVlQkxNR2w1eHBuNngxS1dCRHlZQUg5NlR5QzhvbkNCc1YxWlFZdWpEeHFVdERPeWhzeElZc0JfR3RoVkJUc2xNME1yWGdsWjV1STNlLUNnTGZQelNEcG52aUlIcTlwNTQyRmRQd1J5UjNrSE5pb0NCUUxSU2lBX1FPY3BWMUV5cGFUd3J6YzZ2U3haWjRnamMwcXFpdmlCRlFKQmFJT193NmtZeUtUNC02WUZkTnJqQXBUbXRaaVlTTzA4VWU4VVZ4U1gtRVJJaDJ1UDRWTlhIbE9CVkU4RktHeEd2UjhXQ0pSMHJJb0dXdjNobzVVNlJtYzl2QTFURGtucF90S2tRREJsMldZNXAzZ25oU2JzZnJuZEJFSXlFbFc2ekV1VVJCc2dJZ1FjVlgtY2tPdWFxcXJhZ3h2SUZzbnJxSHdfVVl3bGYtV2xZZFpiRXlnaHRVbVptV29PbE5PNk81UFVXbVd5bFJYdTBvemNhWDJaSzVkS3hNYzNmZHc3RVJaN1l4d093d2FxZnFfN2JPTkZPbzRRcFp6MzlmN3VtY2lFVGw3eUx2REpYaEtkcHZOaU1GRkVsbnhBLWllQjdzc0RaLTlpaFFhQjBveDhtbUE0MUVYX3FCME14LXh6QURqVk1aSzFBYzNNUGE4QVlzcFlSYzl4ekV6UEF1Z181RGk5ZUpEalJyUzE2dE1C)
+      flutter: stable
+      xcode: latest
+      cocoapods: default
     scripts:
-      - name: Add provisioning profiles
-        script: |
-          set -e # exit on first failed command
-
-          PROFILES_HOME="$HOME/Library/MobileDevice/Provisioning Profiles"
-          mkdir -p "$PROFILES_HOME"
-          echo ${PROVISIONING_PROFILE?} | base64 --decode > "$PROFILES_HOME/$(uuidgen).mobileprovision"
-      - name: Add signing certificate
-        script: |
-          set -e # exit on first failed command
-
-          echo ${CERTIFICATE?} | base64 --decode > /tmp/certificate.p12
-          keychain initialize
-          keychain add-certificates \
-              --certificate /tmp/certificate.p12 \
-              --certificate-password ${CERTIFICATE_PASSWORD?}
-      - name: Increment build number
-        script: agvtool new-version -all $BUILD_NUMBER
-      - name: Set up code signing settings on Xcode project
-        script: xcode-project use-profiles
-      - name: Build ipa for distribution
-        script: xcode-project build-ipa \
-                    --workspace "${XCODE_WORKSPACE?}" \
-                    --scheme "${XCODE_SCHEME?}"
+      - |
+        # set up debug keystore
+        rm -f ~/.android/debug.keystore
+        keytool -genkeypair \
+          -alias androiddebugkey \
+          -keypass android \
+          -keystore ~/.android/debug.keystore \
+          -storepass android \
+          -dname 'CN=Android Debug,O=Android,C=US' \
+          -keyalg 'RSA' \
+          -keysize 2048 \
+          -validity 10000
+      - |
+        # set up local properties
+        echo "flutter.sdk=$HOME/programs/flutter" > "$FCI_BUILD_DIR/android/local.properties"
+      - flutter packages pub get
+      - flutter build appbundle --debug
+      - find . -name "Podfile" -execdir pod install \;
+      - keychain initialize
+      - app-store-connect fetch-signing-files "*" --type IOS_APP_DEVELOPMENT --create
+      - keychain add-certificates
+      - xcode-project use-profiles
+      - flutter build ipa --export-options-plist=~/export_options.plist
     artifacts:
+      - build/**/outputs/apk/**/*.apk
+      - build/**/outputs/bundle/**/*.aab
+      - build/**/outputs/**/mapping.txt
       - build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+      - '*.snap'
+      - build/windows/**/*.msix
+      - flutter_drive.log
     publishing:
       email:
         recipients:
           - subash.nair@outlook.com
-          
+      app_store_connect:
+        api_key: Encrypted(Z0FBQUFBQmlQTE5lVVNaYUtYT2thVVlYMm01T1VBdjZwQi1JQnZoUnVvMERJS3BveDZmWEc4YnA2cXRSQ1h4amJXS2pmMjFCcUoyNWs4Q01fOVdBMjJOWVk1VTlQMHZXQUY1NlAwMTZIOHpRM0UzT1Z6U2J6ZWh1LTV0RkR6QmJDZWRPSl9LeDBpWlRFWnJKZVlmUlQyQ3NJWjRNdnpfSHE5Qnc3ci11c1k4MXIwYWNRVGI0cXRXV2hjcjZDa1ZlblJteExoTHYtdFZMS21OeHdIcXVpYk9BU25ta2h4am81bU5OVFo4Vzl2R2tFWGxfcVBsajl2SW1kelYzZjdZQmNJMG13U0VMbm1VdmZSLUpWTFRYUXE4YTBnallfekV0YkpFX1h5TkJmY2pIdjVBbktNZmd6YWNyRFVwYl8wSTZEbjBnZW9wM0xCWGVUTFM3UnZfUm9OWk5xaUtxTjFiR1VVZHUzbG5VUHlHYUQtZGVlTm4xWk1OeGU5cWMtbUhEVmM2NWJnN3BaR2EtcDNJQ1lua1dSb3R4dTB2cnJDQlgxc1lQYmRmbmdzWG5IN0xneEd0SkUyND0=)
+        key_id: NTANGZ52UQ
+        issuer_id: 69a6de97-d145-47e3-e053-5b8c7c11a4d1
+        submit_to_testflight: true
+        submit_to_app_store: false
+        beta_groups:
+          - salt-track-beta
