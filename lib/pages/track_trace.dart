@@ -84,9 +84,12 @@ class _TrackerState extends State<Tracker> {
                     return null; // Use default value for other states and odd rows.
                   }),
               cells: <DataCell>[
-                DataCell(SizedBox(width:  58,child: Text(order.statuses![index].status))),
-                DataCell(SizedBox(width: 100,child: Text(order.statuses![index].detail))),
-                DataCell(SizedBox(width:  70,child: Text(DateFormat.yMd().add_jm().format(order.statuses![index].timeStamp)))),
+                DataCell(SizedBox(width:  60,child: Text(order.statuses![index].status,
+                  style: const TextStyle(fontSize: 11 ), ))),
+                DataCell(SizedBox(width: 100,child: Text(order.statuses![index].detail,
+                  style: const TextStyle(fontSize: 10 ), ))),
+                DataCell(SizedBox(width:  70,child: Text(DateFormat.yMd().add_jm().format(order.statuses![index].timeStamp),
+                  style: const TextStyle(fontSize: 11 ), ))),
               ]
           ),
         );
@@ -143,10 +146,10 @@ class _TrackerState extends State<Tracker> {
                     children: [
                       TableRow(
                         children: [
-                          TableCell(child: Text('AWB Nr:', style: TextStyle (fontWeight:FontWeight.bold))),
-                          TableCell(child: Text(this.awb_nr)),
-                          TableCell(child: Text('Order#:', style: TextStyle (fontWeight:FontWeight.bold))),
-                          TableCell(child: Text(this.order_num))
+                          TableCell(child: Text('AWB Nr:', style: TextStyle (fontWeight:FontWeight.bold,fontSize: 14))),
+                          TableCell(child: Text(this.awb_nr, style: TextStyle(fontSize: 14))),
+                          TableCell(child: Text('Order#:', style: TextStyle (fontWeight:FontWeight.bold, fontSize: 14))),
+                          TableCell(child: Text(this.order_num, style: TextStyle(fontSize: 14)))
                         ]
                       ),
                       TableRow(
