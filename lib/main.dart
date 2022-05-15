@@ -6,6 +6,7 @@ import 'package:salt_track/pages/track_trace.dart';
 //import 'package:world_time/pages/tracker.dart';
 
 void main()=> runApp(MaterialApp(
+  debugShowCheckedModeBanner: false ,
   initialRoute: '/',
   routes: {
     '/': (context)=> LoginScreen(),

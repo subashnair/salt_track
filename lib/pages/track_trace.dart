@@ -86,9 +86,9 @@ class _TrackerState extends State<Tracker> {
               cells: <DataCell>[
                 DataCell(SizedBox(width:  60,child: Text(order.statuses![index].status,
                   style: const TextStyle(fontSize: 11 ), ))),
-                DataCell(SizedBox(width: 100,child: Text(order.statuses![index].detail,
+                DataCell(SizedBox(width: 110,child: Text(order.statuses![index].detail,
                   style: const TextStyle(fontSize: 10 ), ))),
-                DataCell(SizedBox(width:  70,child: Text(DateFormat.yMd().add_jm().format(order.statuses![index].timeStamp),
+                DataCell(SizedBox(width:  80,child: Text(DateFormat.yMd().add_jm().format(order.statuses![index].timeStamp),
                   style: const TextStyle(fontSize: 11 ), ))),
               ]
           ),
@@ -105,7 +105,7 @@ class _TrackerState extends State<Tracker> {
     return Scaffold(
       backgroundColor: Colors.blueGrey[20],
       appBar: AppBar(
-        title: Text('Track Orders : $storerKey'),
+        title: Text('Track Order : $storerKey'),
         backgroundColor: Colors.lightBlue,
         iconTheme: IconThemeData(),
       ),
@@ -115,7 +115,7 @@ class _TrackerState extends State<Tracker> {
         //crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
            Padding(
-            padding: const EdgeInsets.all(5.0),
+            padding: const EdgeInsets.all(25.0),
             child:Container(
               width: 200,
               child:  TextField(
@@ -138,9 +138,9 @@ class _TrackerState extends State<Tracker> {
                   //color: Colors.lightGreen,
                   child : Table(
                   columnWidths: {
-                        0: FixedColumnWidth(75.0),// fixed to 100 width
+                        0: FixedColumnWidth(85.0),// fixed to 100 width
                         1: FlexColumnWidth(200),
-                        2: FixedColumnWidth(55.0),
+                        2: FixedColumnWidth(65.0),
                         3: FixedColumnWidth(50.0),//fixed to 100 width
                      },
                     children: [
@@ -170,17 +170,18 @@ class _TrackerState extends State<Tracker> {
                       ]),
                   ),
                   ),
-              elevation: 8,
-              shadowColor: Colors.green,
-              margin: EdgeInsets.all(20),
+              elevation: 7,
+              shadowColor: Colors.lightBlue,
+              margin: EdgeInsets.all(10),
               shape:  OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                   borderSide: BorderSide(color: Colors.white)
               ),
             ),
           ),
+          SizedBox( height: 15,),
           Expanded(
-              // child: Card (
+              child: Card (
                 child:DataTable(
                      headingRowColor: MaterialStateProperty.all<Color>(Colors.indigo),
                      headingRowHeight: 35,
@@ -188,15 +189,16 @@ class _TrackerState extends State<Tracker> {
                      columns: _colGenerate(),
                      rows: _rowGenerate()
                   ),
-          //       elevation: 8,
-          //       shadowColor: Colors.green,
-          //       margin: EdgeInsets.all(20),
-          //       shape:  OutlineInputBorder(
-          //       borderRadius: BorderRadius.circular(10),
-          //     borderSide: BorderSide(color: Colors.white)
-          //   )
-          // )
+                elevation: 8,
+                shadowColor: Colors.green,
+                margin: EdgeInsets.all(10),
+                shape:  OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+              borderSide: BorderSide(color: Colors.white)
+            )
+          )
           ),
+          SizedBox( height: 75,),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -219,6 +221,7 @@ class _TrackerState extends State<Tracker> {
               )
             ],
           ),
+          SizedBox( height: 25,)
         ],
       )
     );

@@ -54,12 +54,23 @@ class _LoginState extends State<LoginScreen> {
         .of(context)
         .size;
     return Scaffold(
-    //  appBar: AppBar(title: Text('RHS salt-fulfil'),),
-      backgroundColor: Colors.blueGrey,
-      body: SingleChildScrollView(
-        child: Center(
+      appBar: AppBar(title: Text('salt-fulfil'),),
+
+      backgroundColor: Colors.cyan,
+      body:
+     SingleChildScrollView(
+      child:
+      Center(
          child: Container(
           decoration: BoxDecoration(
+            /*gradient: LinearGradient(
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
+              colors: [
+                Colors.cyan,
+                Colors.blueAccent,
+              ],
+            ),*/
             image: DecorationImage(
               image: AssetImage('assets/salt-logo.png'),
               fit: BoxFit.fitWidth,
@@ -67,16 +78,16 @@ class _LoginState extends State<LoginScreen> {
           ),
 
           child: Column(
-        //  crossAxisAlignment: CrossAxisAlignment.center,
+          //crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
-            Text(
+         /*   Text(
               "Login In",
               style: TextStyle(fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: size.height * 0.15),
+            ),*/
+           SizedBox(height: size.height * 0.10),
             Text('RHS Logistics',style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35, color: Colors.indigo),),
-            Text('Omnichannel Connecting Platform',style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20 ,color: Colors.white),),
+            Text('Omnichannel Platform',style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20 ,color: Colors.white),),
             SizedBox(height: size.height * 0.35),
             RoundedInputField(
               hintText: "User Name",
@@ -98,8 +109,10 @@ class _LoginState extends State<LoginScreen> {
             SizedBox(height: size.height * 0.03),
           ],
         ),
-     )),
-    ));
+     )
+      ),
+    )
+    );
   }
 }
 
