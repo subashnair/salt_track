@@ -54,7 +54,7 @@ class _LoginState extends State<LoginScreen> {
         .of(context)
         .size;
     return Scaffold(
-      appBar: AppBar(title: Text('salt-fulfil'),),
+      appBar: AppBar(title: Text('salt-fulfill'),),
 
       backgroundColor: Colors.cyan,
       body:
