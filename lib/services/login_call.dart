@@ -6,8 +6,13 @@ class Tracking {
 
   Future<LoginResult> getLogin(String credential) async {
     try {
-      Response response = await get(Uri.parse('https://rhslremote.rhslogisticsdwc.com/GeneralApi/ecomm/login/$credential'));
+      Response response = await get(Uri.parse('http://bizzapp.trident-freight.com/trf-serv.sit/api/status-update/v1.0/login?username=jacob&password=jacobksa'));
+      //Response response = await get(Uri.parse('https://rhslremote.rhslogisticsdwc.com/GeneralApi/ecomm/login/$credential'));
+
+      print(response);
+
       Map data = jsonDecode(response.body);
+      print(data);
       LoginResult _result = LoginResult();
       _result.Success = data['Success'];
       _result.Code = data['Code'];
